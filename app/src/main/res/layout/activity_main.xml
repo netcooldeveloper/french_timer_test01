@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPickerMM"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/numberPickerSS"
+        android:layout_marginEnd="15dp" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPickerSS"
+        android:layout_alignTop="@+id/numberPickerSS"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="19dp" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPickerCount"
+        android:layout_below="@+id/numberPickerSS"
+        android:layout_alignStart="@+id/numberPickerSS"
+        android:layout_marginTop="41dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/buttonStart"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="113dp"
+        android:onClick="ButtonStartClick" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CountDown"
+        android:id="@+id/switch_countdown"
+        android:checked="false"
+        android:layout_alignBottom="@+id/numberPickerCount"
+        android:layout_alignEnd="@+id/numberPickerMM"
+        android:layout_marginBottom="47dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_Count"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/editTextWorktime"
+        android:layout_marginBottom="79dp"
+        android:layout_above="@+id/buttonStart"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
